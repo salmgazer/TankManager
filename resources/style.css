@@ -1,0 +1,19 @@
+.center-button{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: lighter;
+}
+
+#homepage{
+  float: center;
+}
+
+.menu-item{
+  font-weight: lighter;
+  color: brown;
+}
+
+.menu-item: hover{
+  backgroud-color: red;
+  color: white;
+}
