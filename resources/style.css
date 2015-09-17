@@ -7,3 +7,13 @@
 #homepage{
   float: center;
 }
+
+.menu-item{
+  font-weight: lighter;
+  color: brown;
+}
+
+.menu-item: hover{
+  backgroud-color: red;
+  color: white;
+}

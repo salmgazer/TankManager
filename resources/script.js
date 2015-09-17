@@ -18,7 +18,7 @@ $(function() {
 function logIn(secretKey){
   var link = "http://10.10.33.191/mw/tanks.php?cmd=3&";
   var strUrl = link+"secretKey="+secretKey;
-
+  alert(strUrl);
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
     alert(objResult.message);
