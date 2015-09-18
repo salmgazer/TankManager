@@ -16,12 +16,29 @@ $(function() {
 });
 
 function logIn(secretKey){
-  var link = "http://10.10.33.191/mw/tanks.php?cmd=3&";
+  var link = "controller/tanks.php?cmd=3&";
   var strUrl = link+"secretKey="+secretKey;
-  alert(strUrl);
+
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
-    alert(objResult.message);
+    window.location.href = "#homepage";
+    return;
+  }
+  alert("Wrong password");
+  return;
+}
+
+function homeTanks(){
+  var strUrl = "controller/tanks.php?cmd=2";
+
+  var objResult = sendRequest(strUrl);
+  if(objResult.result == 1){
+    var tanks = objResult.tanks;
+    var tankHTML = "";
+    for (var i = 0; i < tanks.length; i++) {
+      tankHTML += '<li data-role="collapsible" class="singleTank" data-iconpos="right" data-inset="true"><h2>'+tanks[i]['tank_id']+':<strong class="tank-status">'+tanks[i]['tank_status']+'</strong></h2>Tank ID: <strong id="tank-id">'+tanks[i]['tank_status']+'</strong><br>Date submitted: <strong id="date-added">'+tanks[i]['date_added']+'</strong><br>Tank status: <strong id="tank-status">'+tanks[i]['tank_status']+'</strong></li>';
+    }
+    document.getElementById('homeTankList').innerHTML = tankHTML;
     return;
   }
   alert(objResult.message);

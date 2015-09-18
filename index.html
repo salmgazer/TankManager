@@ -16,20 +16,62 @@
 			</div>
 
 			<div data-role="page" id="homepage">
+				<div data-role="header" class="top-heading">
+					<h1>Tank Manager: Home</h1>
+				</div>
 				<div data-role="header">
 					<div data-role="navbar">
 					<ul>
-						<li><a href="#anylink" class="menu-item">Menu</a></li>
-						<li><a href="#anylink" class="menu-item">Search</li>
-						<li><a href="#anylink" class="menu-item">Sign Out</a></li>
+						<li class="menu-item"><a href="#newEntry">New Reading</a></li>
+						<li class="menu-item"><a href="#addTank">Add Tank</a></li>
+						<li class="menu-item"><a href="#signOut">Sign Out</a></li>
 					</ul>
 				</div>
 			</div>
 
+			<div class="mid-body-home">
 			<div id="homeTanks" class="homeTanks">
-				
+					<ul data-role="listview" data-inset="true" id="homeTankList" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Search tanks...">
+			</ul>
 		</div>
+	</div>
+		</div>
+
+		<div data-role="page" id="newEntry">
+			<div data-role="header" class="top-heading">
+				<h1>Tank Manager: New Entry</h1>
 			</div>
+			<div data-role="header">
+				<div data-role="navbar">
+				<ul>
+					<li class="menu-item"><a hred="#" data-rel="back">Home</a></li>
+					<li class="menu-item"><a href="#addTank">Add Tank</a></li>
+					<li class="menu-item signout"><a href="#signOut">Sign Out</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="home-mid-body">
+			<form>
+				<div class="ui-field-contain">
+					<label for="select-native-1">Basic:</label>
+    			<select name="select-native-1" id="select-native-1">
+        		<option value="1">The 1st Option</option>
+        		<option value="2">The 2nd Option</option>
+        		<option value="3">The 3rd Option</option>
+        		<option value="4">The 4th Option</option>
+    		 </select>
+			</div>
+				<input type="text" name="tank_status" id="tank_status" placeholder="Tank status">
+				<input type="button" class="center-button" data-inline="true" value="Submit">
+			</form>
+		</div>
+		</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			homeTanks();
+			});
+		</script>
 		</body>
   </head>
 </html>

@@ -1,6 +1,7 @@
 .center-button{
   text-align: center;
   margin: 0 auto;
+  float:center;
   font-weight: lighter;
 }
 
@@ -10,10 +11,57 @@
 
 .menu-item{
   font-weight: lighter;
-  color: brown;
+  color: red;
 }
 
 .menu-item: hover{
   backgroud-color: red;
   color: white;
+}
+
+.top-heading{
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.tank-status{
+  font-weight: lighter;
+  text-align: right;
+  margin-left: 200px;
+}
+
+.singleTank{
+  margin-bottom: 5px;
+}
+
+.homeTanks{
+  width: 90%;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.mid-body-home{
+  background-color: orange;
+}
+
+#homeTankList{
+  margin-bottom: 50px;
+}
+
+.signout{
+  background-color: red;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading {
+    margin: 0;
+}
+.ui-li-static.ui-collapsible {
+    padding: 0;
+}
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
+    border-top-width: 0;
+}
+.ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content {
+    border-bottom-width: 0;
 }
