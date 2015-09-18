@@ -22,13 +22,13 @@ if($_REQUEST['cmd'] == 1){
 		$str_sql = "INSERT INTO mw_tanks_report(tank_id, tank_status) VALUES ('$tank_id', '$tank_status')";
 	}
 		if ($datamaster->query($str_sql)) {
-			echo "Success!";
+			echo '{"result": 1, "message": "Success!"}';
 			return;
 		}
-		echo "Failure!";
-		return false;
+		echo '{"result": 0, "message": "Failed to make entry. Try again!"}';
+		return;
 }
-echo "Make sure all data is sent";
+echo '{"result": 0, "message": "Failed. Not all data were sent"}';
 return;
 }
 //Get dataset
@@ -62,6 +62,30 @@ else if($_REQUEST['cmd'] == 3){
 		return;
 	}
 	echo '{"result": 0, "message": "false"}';
+	return;
+}
+
+else if($_REQUEST['cmd'] == 4){
+	$str_sql = "select tank_id from mw_tanks_report";
+	$datamaster->query($str_sql);
+	$row = $datamaster->fetch();
+	if($row == null){
+		echo '{"result": 0, "message": "No tanks added yet!"}';
+		return;
+	}
+	echo '{"result": 1, "tanks": [';
+	while($row){
+		echo json_encode($row);
+		$row = $datamaster->fetch();
+		if($row){
+			echo ',';
+		}
+	}
+	echo ']}';
+	return;
+}
+else if($_REQUEST['cmd'] == 6){
+	session_destroy();
 	return;
 }
 ?>
