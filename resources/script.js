@@ -23,11 +23,12 @@ $(function() {
     });
 });
 
-$(function() {
-    $('#signout').click(function(e) {
+/*$(function() {
+    $('.signout').click(function(e) {
       signout();
     });
 });
+*/
 
 $(function() {
     $('#newEntryForm').submit(function(e) {
@@ -69,10 +70,12 @@ function homeTanks(){
 }
 
 function signout(){
+  alert("out");
   var strUrl = "controller/tanks.php?cmd=6";
 
   var objResult = sendRequest(strUrl);
   window.location.href = "#loginpage";
+  return;
 }
 
 function getTanks(){
@@ -117,5 +120,6 @@ function addNewTank(tank_id){
     return;
   }
   alert(objResult.message);
+  window.location.href = "#homepage";
   return;
 }
