@@ -10,8 +10,24 @@ function sendRequest(u){
 }
 
 $(function() {
-    $('#loginbtn').click(function(e) {
+    $('#loginForm').submit(function(e) {
+      e.preventDefault();
       logIn($("#secretKey").val());
+    });
+});
+
+$(function() {
+    $('#signout').click(function(e) {
+      signout();
+    });
+});
+
+$(function() {
+    $('#newEntryForm').submit(function(e) {
+      e.preventDefault();
+      var tank_id = document.getElementById('addedTanks').options[document.getElementById('addedTanks').selectedIndex].text;
+      var tank_status = $('#tank_status').val();
+      addNewEntry(tank_id, tank_status);
     });
 });
 
@@ -43,4 +59,44 @@ function homeTanks(){
   }
   alert(objResult.message);
   return;
+}
+
+function signout(){
+  alert("ues");
+  var strUrl = "controller/tanks.php?cmd=6";
+
+  var objResult = sendRequest(strUrl);
+  window.location.href = "#loginpage";
+}
+
+function getTanks(){
+  var strUrl = "controller/tanks.php?cmd=4";
+
+  var objResult = sendRequest(strUrl);
+  if(objResult.result == 1){
+    var tanks = objResult.tanks;
+    var tankHTML = "";
+    for (var i = 0; i < tanks.length; i++) {
+      var val = i + 1;
+      tankHTML += '<option value="'+val+'">'+tanks[i]['tank_id']+'</option>';
+    }
+    document.getElementById('addedTanks').innerHTML = tankHTML;
+    return;
+  }
+  document.getElementById("formArea").innerHTML = "<h1>NO TANKS YET! CLICK ADD TANK ABOVE TO ADD NEW TANKS</h1>";
+  return;
+}
+
+function addNewEntry(tank_id, tank_status){
+var strUrl = "controller/tanks.php?cmd=1&tank_id="+tank_id+"&tank_status="+tank_status;
+
+var objResult = sendRequest(strUrl);
+if(objResult.result == 1){
+  homeTanks();
+  window.location.href = "#homepage";
+  return;
+}
+alert(objResult.message);
+return;
+//store to file
 }

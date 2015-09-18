@@ -9,10 +9,11 @@
 		 <script src="resources/script.js"></script>
 		 <body>
 		  <div data-role="page" id="loginpage">
-				<label for="secretKey">Text input:</label>
+				<form id="loginForm">
 				<input type="text" name="secretKey" id="secretKey" value="">
-				<input type="button" name="loginbtn" class="center-button" id="loginbtn" data-inline="true" value="Log In">
+				<input type="submit" name="loginbtn" class="center-button" id="loginbtn" data-inline="true" value="Log In">
 				<a href="#homepage" data-inline="false">Home</a>
+			</form>
 			</div>
 
 			<div data-role="page" id="homepage">
@@ -24,7 +25,7 @@
 					<ul>
 						<li class="menu-item"><a href="#newEntry">New Reading</a></li>
 						<li class="menu-item"><a href="#addTank">Add Tank</a></li>
-						<li class="menu-item"><a href="#signOut">Sign Out</a></li>
+						<li class="menu-item" id="signout"><a href="#signout">Sign Out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -46,30 +47,52 @@
 				<ul>
 					<li class="menu-item"><a hred="#" data-rel="back">Home</a></li>
 					<li class="menu-item"><a href="#addTank">Add Tank</a></li>
-					<li class="menu-item signout"><a href="#signOut">Sign Out</a></li>
+					<li class="menu-item signout" id="signout"><a href="#signout">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="home-mid-body">
-			<form>
+		<div class="mid-body-home" id="formArea">
+			<div class="formIntro">
+				<h4>Fill form to complete an entry.
+			</div>
+			<form id="newEntryForm">
 				<div class="ui-field-contain">
-					<label for="select-native-1">Basic:</label>
-    			<select name="select-native-1" id="select-native-1">
-        		<option value="1">The 1st Option</option>
-        		<option value="2">The 2nd Option</option>
-        		<option value="3">The 3rd Option</option>
-        		<option value="4">The 4th Option</option>
+    			<select name="addedTanks" id="addedTanks" data-native-menu="false">
     		 </select>
 			</div>
 				<input type="text" name="tank_status" id="tank_status" placeholder="Tank status">
-				<input type="button" class="center-button" data-inline="true" value="Submit">
+				<input type="submit" class="center-button" data-inline="true" value="Submit">
+			</form>
+		</div>
+		</div>
+		<div data-role="page" id="addTank">
+			<div data-role="header" class="top-heading">
+				<h1>Tank Manager: New Tank</h1>
+			</div>
+			<div data-role="header">
+				<div data-role="navbar">
+				<ul>
+					<li class="menu-item"><a hred="#" data-rel="back">Home</a></li>
+					<li class="menu-item"><a href="#addTank">New Entry</a></li>
+					<li class="menu-item signout" id="signout"><a href="#signout">Sign Out</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mid-body-home">
+			<div class="formIntro">
+				<h4>Fill form to add new tank.
+			</div>
+			<form id="newTankForm">
+				<input type="text" name="tank_id" id="tank_id" placeholder="Tank ID">
+				<input type="submit" class="center-button" data-inline="true" value="Submit">
 			</form>
 		</div>
 		</div>
 		<script type="text/javascript">
 		$(document).ready(function() {
 			homeTanks();
+			getTanks();
 			});
 		</script>
 		</body>
