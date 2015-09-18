@@ -9,10 +9,12 @@
 		 <script src="resources/script.js"></script>
 		 <body>
 		  <div data-role="page" id="loginpage">
-				<form id="loginForm">
+				<div class="app-heading-area">
+					<h2 class="app-heading">ASHESI TANK MANAGER</h2>
+				</div>
+				<form id="loginForm" class="loginForm">
 				<input type="text" name="secretKey" id="secretKey" value="">
-				<input type="submit" name="loginbtn" class="center-button" id="loginbtn" data-inline="true" value="Log In">
-				<a href="#homepage" data-inline="false">Home</a>
+				<input type="submit" name="loginbtn" class="center-button" id="loginbtn" data-inline="false" value="Log In">
 			</form>
 			</div>
 
@@ -23,9 +25,9 @@
 				<div data-role="header">
 					<div data-role="navbar">
 					<ul>
-						<li class="menu-item"><a href="#newEntry">New Reading</a></li>
-						<li class="menu-item"><a href="#addTank">Add Tank</a></li>
-						<li class="menu-item" id="signout"><a href="#signout">Sign Out</a></li>
+						<li class="menu-item"><a href="#newEntry" data-icon="plus">New Reading</a></li>
+						<li class="menu-item"><a href="#addTank" data-icon="plus">Add Tank</a></li>
+						<li class="menu-item" id="signout"><a href="#signout" data-icon="arrow-r">Sign Out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -40,14 +42,14 @@
 
 		<div data-role="page" id="newEntry">
 			<div data-role="header" class="top-heading">
-				<h1>Tank Manager: New Entry</h1>
+				<h1>Tank Manager: New Reading</h1>
 			</div>
 			<div data-role="header">
 				<div data-role="navbar">
 				<ul>
-					<li class="menu-item"><a hred="#" data-rel="back">Home</a></li>
-					<li class="menu-item"><a href="#addTank">Add Tank</a></li>
-					<li class="menu-item signout" id="signout"><a href="#signout">Sign Out</a></li>
+					<li class="menu-item"><a hred="#" data-icon="home" data-rel="back">Home</a></li>
+					<li class="menu-item"><a href="#addTank" data-icon="plus">Add Tank</a></li>
+					<li class="menu-item signout" id="signout"><a href="#signout" data-icon="arrow-r">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>
@@ -73,9 +75,9 @@
 			<div data-role="header">
 				<div data-role="navbar">
 				<ul>
-					<li class="menu-item"><a hred="#" data-rel="back">Home</a></li>
-					<li class="menu-item"><a href="#addTank">New Entry</a></li>
-					<li class="menu-item signout" id="signout"><a href="#signout">Sign Out</a></li>
+					<li class="menu-item"><a hred="#" data-rel="back" data-icon="home">Home</a></li>
+					<li class="menu-item"><a href="#addTank" data-icon="plus">New Reading</a></li>
+					<li class="menu-item signout" id="signout"><a href="#signout" data-icon="arrow-r">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>

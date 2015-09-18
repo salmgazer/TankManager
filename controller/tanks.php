@@ -88,4 +88,25 @@ else if($_REQUEST['cmd'] == 6){
 	session_destroy();
 	return;
 }
+
+else if($_REQUEST['cmd'] == 5){
+
+	$tank_id = $_REQUEST['tank_id'];
+
+	$str_sql = "SELECT * FROM mw_tanks_report where tank_id='$tank_id'";
+	$datamaster->query($str_sql);
+	$row = $datamaster->fetch();
+if($row != null){
+		echo '{"result": 0, "message": "Tank ID already exists"}';
+		return;
+	}
+
+	$str_sql = "INSERT INTO mw_tanks_report(tank_id, tank_status) VALUES ('$tank_id', 'New tank')";
+	if($datamaster->query($str_sql)){
+		echo '{"result": 1, "message": "Successfully added tank"}';
+		return;
+	}
+	echo '{"result": 0, "message": "Could not add tank. Try again!"}';
+	return;
+}
 ?>
