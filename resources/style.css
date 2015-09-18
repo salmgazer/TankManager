@@ -19,9 +19,24 @@
   color: white;
 }
 
+.app-heading{
+  color: white;
+  padding-bottom: -30px;
+  padding-top: -30px;
+}
+
+.app-heading-area{
+  background-color: brown;
+}
 .top-heading{
   background-color: #000000;
   color: #ffffff;
+}
+
+.loginForm{
+  vertical-align: center;
+  float: center;
+  margin-top: 100px;
 }
 
 .tank-status{
