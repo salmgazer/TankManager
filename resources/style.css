@@ -21,8 +21,9 @@
 
 .app-heading{
   color: white;
-  padding-bottom: -30px;
-  padding-top: -30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .app-heading-area{
@@ -31,6 +32,14 @@
 .top-heading{
   background-color: #000000;
   color: #ffffff;
+}
+
+.loginbtn{
+  margin-top: 20px;
+}
+
+#secretKey{
+  margin-bottom: 20px;
 }
 
 .loginForm{

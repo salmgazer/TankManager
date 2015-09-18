@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	 <head>
+		 <link rel="stylesheet" href="resources/themes/newTheme.min.css">
+		 <link rel="stylesheet" href="resources/themes/jquery.mobile.icons.css">
 	 	 <link rel="stylesheet" href="resources/jquery.mobile-1.4.5.min.css">
 		 <link rel="stylesheet" href="resources/style.css">
 		 <!--<script src="resources/jquery-1.11.3.min.js"></script>-->
@@ -12,10 +14,13 @@
 				<div class="app-heading-area">
 					<h2 class="app-heading">ASHESI TANK MANAGER</h2>
 				</div>
-				<form id="loginForm" class="loginForm">
-				<input type="text" name="secretKey" id="secretKey" value="">
-				<input type="submit" name="loginbtn" class="center-button" id="loginbtn" data-inline="false" value="Log In">
+				<form id="loginForm" class="loginForm" data-theme="a">
+				<input type="text" name="secretKey" id="secretKey" value="" placeholder="Enter login key">
+				<input type="submit" name="loginbtn" class="center-button loginbtn ui-btn" id="loginbtn" data-inline="false" value="Log In">
 			</form>
+			<div data-role="footer">
+			<h1>Ashesi Tank Manager</h1>
+		 </div>
 			</div>
 
 			<div data-role="page" id="homepage">
@@ -25,9 +30,9 @@
 				<div data-role="header">
 					<div data-role="navbar">
 					<ul>
-						<li class="menu-item"><a href="#newEntry" data-icon="plus">New Reading</a></li>
-						<li class="menu-item"><a href="#addTank" data-icon="plus">Add Tank</a></li>
-						<li class="menu-item" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r">Sign Out</a></li>
+						<li class="menu-item"><a href="#newEntry" data-icon="plus" data-transition="flip">New Reading</a></li>
+						<li class="menu-item"><a href="#addTank" data-icon="plus" data-transition="fade">Add Tank</a></li>
+						<li class="menu-item" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r" data-transition="slide">Sign Out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -38,6 +43,9 @@
 			</ul>
 		</div>
 	</div>
+	<div data-role="footer">
+	<h1>Ashesi Tank Manager</h1>
+ </div>
 		</div>
 
 		<div data-role="page" id="newEntry">
@@ -47,9 +55,9 @@
 			<div data-role="header">
 				<div data-role="navbar">
 				<ul>
-					<li class="menu-item"><a hred="#" data-icon="home" data-rel="back">Home</a></li>
-					<li class="menu-item"><a href="#addTank" data-icon="plus">Add Tank</a></li>
-					<li class="menu-item signout" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r">Sign Out</a></li>
+					<li class="menu-item"><a hred="#" data-icon="home" data-rel="back" data-transition="flip">Home</a></li>
+					<li class="menu-item"><a href="#addTank" data-icon="plus" data-transition="pop">Add Tank</a></li>
+					<li class="menu-item signout" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r" data-transition="slidedown">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>
@@ -67,6 +75,9 @@
 				<input type="submit" class="center-button" data-inline="true" value="Submit">
 			</form>
 		</div>
+		<div data-role="footer">
+		<h1>Ashesi Tank Manager</h1>
+	 </div>
 		</div>
 		<div data-role="page" id="addTank">
 			<div data-role="header" class="top-heading">
@@ -75,9 +86,9 @@
 			<div data-role="header">
 				<div data-role="navbar">
 				<ul>
-					<li class="menu-item"><a hred="#" data-rel="back" data-icon="home">Home</a></li>
-					<li class="menu-item"><a href="#addTank" data-icon="plus">New Reading</a></li>
-					<li class="menu-item signout" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r">Sign Out</a></li>
+					<li class="menu-item"><a hred="#" data-rel="back" data-icon="home" data-transition="slideup">Home</a></li>
+					<li class="menu-item"><a href="#addTank" data-icon="plus" data-transiton="fade">New Reading</a></li>
+					<li class="menu-item signout" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r" data-transition="slidedown">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>
@@ -90,6 +101,9 @@
 				<input type="submit" class="center-button" data-inline="true" value="Submit">
 			</form>
 		</div>
+		<div data-role="footer">
+		<h1>Ashesi Tank Manager</h1>
+	 </div>
 		</div>
 		<script type="text/javascript">
 		$(document).ready(function() {

@@ -70,10 +70,11 @@ function homeTanks(){
 }
 
 function signout(){
-  alert("out");
-  var strUrl = "controller/tanks.php?cmd=6";
+  /*var strUrl = "controller/tanks.php?cmd=6";
 
   var objResult = sendRequest(strUrl);
+  */
+  document.getElementById('secretKey').value = "";
   window.location.href = "#loginpage";
   return;
 }
