@@ -23,12 +23,12 @@ $(function() {
     });
 });
 
-/*$(function() {
-    $('.signout').click(function(e) {
-      signout();
+$(function() {
+    $('#viewAll').click(function(e) {
+      alert("here");
+      viewAll();
     });
 });
-*/
 
 $(function() {
     $('#newEntryForm').submit(function(e) {
@@ -38,6 +38,7 @@ $(function() {
       addNewEntry(tank_id, tank_status);
     });
 });
+
 
 function logIn(secretKey){
   var link = "controller/tanks.php?cmd=3&";
@@ -63,6 +64,24 @@ function homeTanks(){
       tankHTML += '<li data-role="collapsible" class="singleTank" data-iconpos="right" data-inset="true"><h2>'+tanks[i]['tank_id']+':<strong class="tank-status">'+tanks[i]['tank_status']+'</strong></h2>Tank ID: <strong id="tank-id">'+tanks[i]['tank_status']+'</strong><br>Date submitted: <strong id="date-added">'+tanks[i]['date_added']+'</strong><br>Tank status: <strong id="tank-status">'+tanks[i]['tank_status']+'</strong></li>';
     }
     document.getElementById('homeTankList').innerHTML = tankHTML;
+    return;
+  }
+  alert(objResult.message);
+  return;
+}
+
+function viewAll(){
+  var strUrl = "controller/tanks.php?cmd=7";
+
+  var objResult = sendRequest(strUrl);
+  if(objResult.result == 1){
+    var tanks = objResult.tanks;
+    var tankHTML = "";
+    for (var i = 0; i < tanks.length; i++) {
+      tankHTML += '<li data-role="collapsible" class="singleTank" data-iconpos="right" data-inset="true"><h2>'+tanks[i]['tank_id']+':<strong class="tank-status">'+tanks[i]['tank_status']+'</strong></h2>Tank ID: <strong id="tank-id">'+tanks[i]['tank_status']+'</strong><br>Date submitted: <strong id="date-added">'+tanks[i]['date_added']+'</strong><br>Tank status: <strong id="tank-status">'+tanks[i]['tank_status']+'</strong></li>';
+    }
+    document.getElementById('homeTankList').innerHTML = tankHTML;
+    document.getElementById('viewAllBtnArea').innerHTML = "";
     return;
   }
   alert(objResult.message);

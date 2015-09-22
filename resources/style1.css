@@ -1,0 +1,12 @@
+.app-heading-area{
+  background-color: brown;
+  text-align: center;
+}
+
+.app-heading{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}

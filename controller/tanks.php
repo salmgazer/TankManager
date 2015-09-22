@@ -34,7 +34,27 @@ return;
 //Get dataset
 
 else if ($_REQUEST['cmd'] == 2) {
-	$str_sql = "SELECT * FROM mw_tanks_report order by date_added desc limit 0,15";
+	$str_sql = "SELECT * FROM mw_tanks_report order by date_added desc limit 0,10";
+	$datamaster->query($str_sql);
+	$row = $datamaster->fetch();
+	if($row == null){
+		echo '{"result": 0, "message": "No tanks entered!"}';
+		return;
+	}
+	echo '{"result": 1, "tanks": [';
+	while ($row) {
+		echo json_encode($row);
+		$row = $datamaster->fetch();
+		if($row){
+			echo ",";
+		}
+	}
+	echo ']}';
+	return;
+}
+
+else if ($_REQUEST['cmd'] == 7) {
+	$str_sql = "SELECT * FROM mw_tanks_report order by date_added desc";
 	$datamaster->query($str_sql);
 	$row = $datamaster->fetch();
 	if($row == null){
