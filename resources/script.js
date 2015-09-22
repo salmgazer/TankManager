@@ -82,6 +82,7 @@ function viewAll(){
     }
     document.getElementById('homeTankList').innerHTML = tankHTML;
     document.getElementById('viewAllBtnArea').innerHTML = "";
+    window.location.href="#homepage";
     return;
   }
   alert(objResult.message);
