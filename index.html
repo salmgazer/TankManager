@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 	 <head>
-		 <link rel="stylesheet" href="themes/C1.min.css" />
-		 <link rel="stylesheet" href="themes/C2.min.css" />
-		 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		 <link rel="stylesheet" href="resources/themes/C1.min.css" />
+		 <link rel="stylesheet" href="resources/themes/jquery.mobile.icons.min.css" />
 	 	 <link rel="stylesheet" href="resources/jquery.mobile-1.4.5.min.css">
 		 <link rel="stylesheet" href="resources/style1.css">
 		 <!--<script src="resources/jquery-1.11.3.min.js"></script>-->
@@ -12,12 +11,12 @@
 		 <script src="resources/script.js"></script>
 	 </head>
 		 <body>
-		  <div data-role="page" id="loginpage">
+		  <div data-role="page" id="loginpage" data-theme="c">
 				<div class="app-heading-area">
 					<h2 class="app-heading">ASHESI TANK MANAGER</h2>
 				</div>
 				<form id="loginForm" class="loginForm" data-theme="c">
-				<input type="password" name="secretKey" id="secretKey" value="" placeholder="Enter login key">
+				<input type="password" style="background-color: white;" name="secretKey" id="secretKey" value="" placeholder="Enter login key">
 				<input type="submit" name="loginbtn" class="center-button loginbtn ui-btn" id="loginbtn" data-inline="false" value="Log In">
 			</form>
 			<div data-role="footer" data-theme="a">
@@ -27,6 +26,7 @@
 
 			<div data-role="page" id="homepage" data-theme="c">
 				<div data-role="header" class="top-heading">
+					<a href="#homepage" data-icon="arrow-l" data-transition="flip">Home</a>
 					<h1>Tank Manager: Home</h1>
 				</div>
 				<div data-role="header">
@@ -41,7 +41,7 @@
 
 			<div class="mid-body-home">
 			<div id="homeTanks" class="homeTanks">
-					<ul data-role="listview" data-theme="c" data-inset="true" id="homeTankList" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Search tanks...">
+					<ul data-role="listview" data-theme="a" data-inset="true" id="homeTankList" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Search tanks...">
 			</ul>
 		</div>
 		<!--<div id="viewAllBtnArea">
@@ -53,8 +53,9 @@
  </div>
 		</div>
 
-		<div data-role="page" id="newEntry">
+		<div data-role="page" id="newEntry" data-theme="c">
 			<div data-role="header" class="top-heading">
+				<a href="#homepage" data-icon="arrow-l" data-transition="flip">Home</a>
 				<h1>Tank Manager: New Reading</h1>
 			</div>
 			<div data-role="header">
@@ -69,30 +70,31 @@
 
 		<div class="mid-body-home" id="formArea">
 			<div class="formIntro">
-				<h4>Fill form to complete an entry.
+				<h4>Fill form to complete an entry.</h4>
 			</div>
-			<form id="newEntryForm">
+			<form id="newEntryForm" data-theme="c">
 				<div class="ui-field-contain">
     			<select name="addedTanks" id="addedTanks" data-native-menu="false">
     		 </select>
 			</div>
 				<input type="text" name="tank_status" id="tank_status" placeholder="Tank status">
-				<input type="submit" class="center-button" data-inline="true" value="Submit">
+				<input type="submit" data-icon="check" value="Submit">
 			</form>
 		</div>
 		<div data-role="footer" data-theme="a">
 		<h1>Ashesi Tank Manager</h1>
 	 </div>
 		</div>
-		<div data-role="page" id="addTank">
+		<div data-role="page" id="addTank" data-theme="c">
 			<div data-role="header" class="top-heading">
+				<a href="#homepage" data-icon="arrow-l" data-transition="flip">Home</a>
 				<h1>Tank Manager: New Tank</h1>
 			</div>
 			<div data-role="header">
 				<div data-role="navbar">
 				<ul>
 					<li class="menu-item"><a hred="#" data-rel="back" data-icon="home" data-transition="slideup">Home</a></li>
-					<li class="menu-item"><a href="#addTank" data-icon="plus" data-transiton="fade">New Reading</a></li>
+					<li class="menu-item"><a href="#newEntry" data-icon="plus" data-transiton="fade">New Reading</a></li>
 					<li class="menu-item signout" id="signout" onclick="signout()"><a href="#" data-icon="arrow-r" data-transition="slidedown">Sign Out</a></li>
 				</ul>
 			</div>
@@ -106,7 +108,7 @@
 				<input type="submit" class="center-button" data-inline="true" value="Submit">
 			</form>
 		</div>
-		<div data-role="footer">
+		<div data-role="footer" data-theme="a">
 		<h1>Ashesi Tank Manager</h1>
 	 </div>
 		</div>

@@ -78,7 +78,7 @@ function viewAll(){
     var tanks = objResult.tanks;
     var tankHTML = "";
     for (var i = 0; i < tanks.length; i++) {
-      tankHTML += '<li data-role="collapsible" class="singleTank" data-iconpos="right" data-inset="true"><h2>'+tanks[i]['tank_id']+':<strong class="tank-status">'+tanks[i]['tank_status']+'</strong></h2>Tank ID: <strong id="tank-id">'+tanks[i]['tank_status']+'</strong><br>Date submitted: <strong id="date-added">'+tanks[i]['date_added']+'</strong><br>Tank status: <strong id="tank-status">'+tanks[i]['tank_status']+'</strong></li>';
+      tankHTML += '<li data-role="collapsible" data-theme="c" class="singleTank" data-iconpos="right" data-inset="true"><h2>'+tanks[i]['tank_id']+':<strong class="tank-status">'+tanks[i]['tank_status']+'</strong></h2>Tank ID: <strong id="tank-id">'+tanks[i]['tank_status']+'</strong><br>Date submitted: <strong id="date-added">'+tanks[i]['date_added']+'</strong><br>Tank status: <strong id="tank-status">'+tanks[i]['tank_status']+'</strong></li>';
     }
     document.getElementById('homeTankList').innerHTML = tankHTML;
     document.getElementById('viewAllBtnArea').innerHTML = "";

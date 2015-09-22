@@ -34,7 +34,7 @@ return;
 //Get dataset
 
 else if ($_REQUEST['cmd'] == 2) {
-	$str_sql = "SELECT * FROM mw_tanks_report order by date_added desc limit 0,10";
+	$str_sql = "SELECT * FROM mw_tanks_report order by date_added desc limit 0,15";
 	$datamaster->query($str_sql);
 	$row = $datamaster->fetch();
 	if($row == null){
