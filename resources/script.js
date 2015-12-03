@@ -4,6 +4,7 @@ function sendRequest(u){
     //async is type of request
     var obj=$.ajax({url:u,async:false});
     //Convert the JSON string to object
+    this.headers.extend({'Accept': 'application/json', 'X-Request': 'JSON'});
     var result=$.parseJSON(obj.responseText);
     return result;	//return object
 
@@ -41,7 +42,7 @@ $(function() {
 
 
 function logIn(secretKey){
-  var link = "controller/tanks.php?cmd=3&";
+  var link = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=3&";
   var strUrl = link+"secretKey="+secretKey;
 
   var objResult = sendRequest(strUrl);
@@ -54,7 +55,7 @@ function logIn(secretKey){
 }
 
 function homeTanks(){
-  var strUrl = "controller/tanks.php?cmd=2";
+  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=2";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -71,7 +72,7 @@ function homeTanks(){
 }
 
 function viewAll(){
-  var strUrl = "controller/tanks.php?cmd=7";
+  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=7";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -100,7 +101,7 @@ function signout(){
 }
 
 function getTanks(){
-  var strUrl = "controller/tanks.php?cmd=4";
+  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=4";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -118,7 +119,7 @@ function getTanks(){
 }
 
 function addNewEntry(tank_id, tank_status){
-var strUrl = "controller/tanks.php?cmd=1&tank_id="+tank_id+"&tank_status="+tank_status;
+var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=1&tank_id="+tank_id+"&tank_status="+tank_status;
 
 var objResult = sendRequest(strUrl);
 if(objResult.result == 1){
@@ -132,7 +133,7 @@ return;
 }
 
 function addNewTank(tank_id){
-  var strUrl = "controller/tanks.php?cmd=5&tank_id="+tank_id;
+  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=5&tank_id="+tank_id;
 
   var objResult = sendRequest(strUrl);
 
