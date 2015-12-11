@@ -42,7 +42,7 @@ $(function() {
 
 
 function logIn(secretKey){
-  var link = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=3&";
+  var link = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=3&";
   var strUrl = link+"secretKey="+secretKey;
 
   var objResult = sendRequest(strUrl);
@@ -55,7 +55,7 @@ function logIn(secretKey){
 }
 
 function homeTanks(){
-  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=2";
+  var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=2";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -72,7 +72,7 @@ function homeTanks(){
 }
 
 function viewAll(){
-  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=7";
+  var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=7";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -101,7 +101,7 @@ function signout(){
 }
 
 function getTanks(){
-  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=4";
+  var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=4";
 
   var objResult = sendRequest(strUrl);
   if(objResult.result == 1){
@@ -119,7 +119,7 @@ function getTanks(){
 }
 
 function addNewEntry(tank_id, tank_status){
-var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=1&tank_id="+tank_id+"&tank_status="+tank_status;
+var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=1&tank_id="+tank_id+"&tank_status="+tank_status;
 
 var objResult = sendRequest(strUrl);
 if(objResult.result == 1){
@@ -133,7 +133,7 @@ return;
 }
 
 function addNewTank(tank_id){
-  var strUrl = "http://salm.net46.net/mobileweb/TankManager/TankManager/controller/tanks.php?cmd=5&tank_id="+tank_id;
+  var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/controller/tanks.php?cmd=5&tank_id="+tank_id;
 
   var objResult = sendRequest(strUrl);
 
