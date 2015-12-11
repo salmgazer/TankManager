@@ -14,7 +14,7 @@
 				</author>	
         <icon	src="icon.png"	/>	
         <gap:splash		src="splash.png"/>	
-        <gap:plugin name="cordova-plugin-whitelist" version="npm" />
+        <plugin name="cordova-plugin-whitelist" spec="1.2.0" />
         <allow-navigation href="*" />
         <allow-intent href="*" />
         <access origin="*" />	
