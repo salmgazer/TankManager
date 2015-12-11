@@ -4,7 +4,7 @@
     id="com.salifu.ntf"
     versioncode="11"
     version="1.0.0">
-    <name>Tanks</name>
+    <name>TanksManager</name>
     <description>
         An application to monitor tanks
     </description>
