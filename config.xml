@@ -2,7 +2,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
     xmlns:gap="http://phonegap.com/ns/1.0"
     id="com.salifu.ntf"
-    versioncode="1"
+    versioncode="11"
     version="1.0.0">
     <name>Tanks</name>
     <description>
