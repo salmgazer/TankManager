@@ -2,8 +2,8 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
     xmlns:gap="http://phonegap.com/ns/1.0"
     id="com.salifu.ntf"
-    versioncode="24"
-    version="7.6.0">
+    versioncode="1"
+    version="1.0.0">
     <name>Tanks</name>
     <description>
         An application to monitor tanks
