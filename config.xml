@@ -1,21 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets"
-    xmlns:gap="http://phonegap.com/ns/1.0"
-    id="com.salifu.ntf"
-    versioncode="11"
-    version="1.0.0">
-    <name>TanksManager</name>
-    <description>
-        An application to monitor tanks
-    </description>
-    <author href="http://www.ashesi.edu.gh" email="salifumutaru@gmail.com">
-        Salifu Mutaru
-    </author>
-
-    <icon src="scan.png" />
-    <gap:splash src="icon.png" />
-    <plugin name="cordova-plugin-whitelist" spec="1.2.0" />
-        <allow-navigation href="*" />
-        <allow-intent href="*" />
-        <access origin="*" />
-</widget>
+<?xml version = "1.0" encoding = "UTF-8"?>
+ <widget xmlns = "http://www.w3.org/ns/widgets"	
+ xmlns:gap = "http://phonegap.com/ns/1.0"
+ id	= "Salifu Mutaru"
+ versionCode = "11"	
+ version= "1.0.0">
+ 
+ <name>
+ Track Meter
+ </name>
+ 	
+ <description>	
+ 	Track meters
+ </description>
+ 
+ <author
+ href="http://www.ashesi.edu.gh"
+ email="salifumutaru@gmail.com">
+ </author>	
+ 
+ <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+ <allow-navigation href="*" />
+ <allow-intent href="*" />
+ <access origin = "*"/>
+ <icon src="icon.png"/>
+ <gap:splash src="splash.png"/>
+ </widget>
